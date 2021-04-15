@@ -55,7 +55,7 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(discountName){
-    if (discountName === 'teacher'){
+    if (discountName === 'teacher' || discount === 'student'){
       return this.price * 0.75;
     } else {
       return this.price * 0.9;
