@@ -131,8 +131,6 @@ function getReviewByIndex(array, index) {
   return `${reviewer.name} gave the restaurant a ${reviewer.rating} star review, and their feedback was: ${reviewer.feedback}`;
 }
 
-console.log(getReviewByIndex(reviews, 8));
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -150,12 +148,10 @@ function getLastReview(array) {
   return getReviewByIndex(array, array.length -1);
 
   // my first answer, totally forgot that I had just written that.
+
   // let reviewer = array[array.length - 1];
   // return `${reviewer.name} gave the restaurant a ${reviewer.rating} star review, and their feedback was: ${reviewer.feedback}`;
 }
-
-console.log(getLastReview(reviews));
-
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -173,9 +169,22 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+function getReviewByRating(array, ratingNum) {
+  let tempArray = [];
+  for (let reviewer of array){
+    if (Math.floor(reviewer.rating) === ratingNum){
+      tempArray.push(reviewer);
+    }
   }
+  return tempArray;
+
+  // using filter
+
+  // return array.filter((reviewer) => Math.floor(reviewer.rating) === ratingNum);
+}
+
+console.log(getReviewByRating(reviews, 3));
+
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -191,7 +200,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(reviews) {
     /* code here */
   }
   
