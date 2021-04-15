@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -29,6 +29,12 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const hamburger = createMenuItem("Hamburger", 6, "Lunch");
+console.log(hamburger);
+const pie = createMenuItem("Apple Pie", 5, "Dessert");
+console.log(pie);
+const soda = createMenuItem("Ice Cold Soda", 2, "Drinks");
+console.log(soda);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,8 +54,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
-}
+  discount: function(discountName){
+    if (discountName === 'teacher'){
+      return this.price * 0.75;
+    } else {
+      return this.price * 0.9;
+    }
+  }
+};
 
 
 
@@ -70,6 +82,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5].feedback);
 
 
 
@@ -79,6 +92,15 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+{
+  let name = "Ethan";
+  let rating = 110;
+  let feedback = "It's so delicious!";
+  // trying out destructuring assignment
+  // let [name, rating, feedback] = ["Ethan", 110, "It's so delicious!"];
+  reviews.push({name, rating, feedback});
+}
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,6 +110,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 
@@ -102,11 +126,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  let reviewer = array[index];
+  return `${reviewer.name} gave the restaurant a ${reviewer.rating} star review, and their feedback was: ${reviewer.feedback}`;
 }
 
-
+console.log(getReviewByIndex(reviews, 8));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
