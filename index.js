@@ -183,10 +183,6 @@ function getReviewByRating(array, ratingNum) {
   // return array.filter((reviewer) => Math.floor(reviewer.rating) === ratingNum);
 }
 
-console.log(getReviewByRating(reviews, 3));
-
-
-  
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
