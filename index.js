@@ -209,9 +209,11 @@ function getLongReviews(reviews) {
     }
   }
   return tempArray;
-}
 
-console.log(getLongReviews(reviews));
+  // just playing golf
+
+  // return reviews.filter((review) => review.feedback.split(" ").length > 15);
+}
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -239,9 +241,9 @@ function carMaker(odometer) {
     }};
 }
 
-const myCar = carMaker(0);
-myCar.drive(10);
-console.log(myCar.odometer);
+// const myCar = carMaker(0);
+// myCar.drive(10);
+// console.log(myCar.odometer);
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
